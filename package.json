@@ -1,17 +1,12 @@
 {
   "name": "supermall",
   "version": "0.1.0",
-<<<<<<< HEAD
-=======
-  "private": true,
->>>>>>> b666c9b78d72e334228cfe4699d29241bd51f379
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "eslint": "^7.5.0",
@@ -20,36 +15,18 @@
     "vue-awesome-swiper": "^4.1.1",
     "vue-router": "^3.3.4",
     "xgplayer": "^2.9.10"
-=======
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
->>>>>>> b666c9b78d72e334228cfe4699d29241bd51f379
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
     "babel-eslint": "^10.1.0",
-<<<<<<< HEAD
-=======
-    "eslint": "^6.7.2",
->>>>>>> b666c9b78d72e334228cfe4699d29241bd51f379
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
-<<<<<<< HEAD
     "extends": [
       "plugin:vue/essential"
-=======
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
->>>>>>> b666c9b78d72e334228cfe4699d29241bd51f379
     ],
     "parserOptions": {
       "parser": "babel-eslint"
