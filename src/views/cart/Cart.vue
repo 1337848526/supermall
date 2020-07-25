@@ -1,18 +1,8 @@
 <template>
-  <div class="cart">
-  </div>
+  <div></div>
 </template>
-
 <script>
-export default {
-  name: "Cart",
-  data() {
-    return {
-    
-    };
-  }
-};
+export default {};
 </script>
-
-<style scoped>
+<style scoped='scoped'>
 </style>
