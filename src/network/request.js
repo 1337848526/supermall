@@ -6,7 +6,7 @@ export function request(options) {
     // 1.创建axios的实例对象
     const instance = axios.create({
       baseURL :"http://152.136.185.210:8000/api/n3",
-      timeout: 100000
+      timeout: 5000
     })
 
     // 过滤器(拦截器)
