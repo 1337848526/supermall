@@ -70,6 +70,7 @@ export default {
       isShowBackTop: false,
       tabOffsetTop: 0,
       tabFixed: false,
+      saveY: null,
     };
   },
   created() {
@@ -83,8 +84,6 @@ export default {
     this.$bus.$on("ItemImageLoad", () => {
       refresh();
     });
-   
-  
   },
   methods: {
     /**
@@ -105,7 +104,7 @@ export default {
           this.currentType = "sell";
           break;
       }
-     this.$refs.tabControl2.currentIndex = index
+      this.$refs.tabControl2.currentIndex = index;
       this.$refs.tabControl1.currentIndex = index;
     },
     bindClick() {
@@ -130,12 +129,17 @@ export default {
     getHomeGoods(type) {
       const page = this.goods[type].page + 1;
       getHomeGoods(type, page).then((res) => {
-        console.log(res);
         this.goods[type].list.push(...res.data.list);
         this.goods[type].page += 1;
         this.$refs.scroll.finishPullUp();
       });
     },
+  },
+  activated() {
+    this.$refs.scroll.scrollTo(0, this.saveY, 0);
+  },
+  deactivated() {
+    this.saveY = this.$refs.scroll.getScrollY();
   },
 };
 </script>

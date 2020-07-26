@@ -36,10 +36,12 @@ export default {
     refresh() {
       this.scroll.refresh();
     },
+    getScrollY() {
+      return this.scroll ? this.scroll.y : 0;
+    },
   },
   mounted() {
     //1.创建Bscroll 对象
-
     this.scroll = new BScroll(this.$refs.wrapper, {
       click: true,
       probeType: this.probeType,
@@ -52,12 +54,13 @@ export default {
       });
     }
     //3.监听scroll滚动的位置
-    if(this.pullUpLoad){
-        this.scroll.on('pullingUp',()=>{
-            this.$emit('pullingUp')
-        })
+    if (this.pullUpLoad) {
+      this.scroll.on("pullingUp", () => {
+        this.$emit("pullingUp");
+      });
     }
   },
+ 
 };
 </script>
 <style scoped='scoped'>
